@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Descubre las bicicletas eléctricas, sus tipos,
+    ventajas, autonomía y consejos de mantenimiento.">
+
+  <meta name="theme-color" content="#10251c">
+
+  <title>EcoBike | El futuro de la movilidad</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">⚡</span> EcoBike
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#informacion">Información</a></li>
+        <li><a href="#tipos">Tipos</a></li>
+        <li><a href="#autonomia">Autonomía</a></li>
+        <li><a href="#mantenimiento">Mantenimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="eyebrow">MOVILIDAD INTELIGENTE Y SOSTENIBLE</span>
+
+        <h1>Pedaleá hacia un <span>futuro mejor.</span></h1>
+
+        <p>
+          Descubrí cómo las bicicletas eléctricas están
+          transformando la manera de movernos por la ciudad,
+          explorar la naturaleza y cuidar el planeta.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#informacion">
+            Descubrir más
+          </a>
+          <a class="btn btn-outline" href="#tipos">
+            Explorar modelos
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>0</strong>
+            <span>Emisiones directas al pedalear</span>
+          </div>
+          <div>
+            <strong>+ Libertad</strong>
+            <span>Para tus recorridos diarios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="informacion">
+      <div class="section-heading">
+        <span class="eyebrow">CONOCÉ LA TECNOLOGÍA</span>
+        <h2>¿Qué es una bicicleta eléctrica?</h2>
+        <p>
+          Es una bicicleta equipada con un motor eléctrico
+          que proporciona asistencia al pedaleo y facilita
+          los desplazamientos.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <div class="card-icon">🔋</div>
+          <h3>Batería recargable</h3>
+          <p>
+            Almacena la energía que alimenta el motor.
+            Su capacidad, normalmente expresada en Wh,
+            influye en la autonomía.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-icon">⚙️</div>
+          <h3>Motor eléctrico</h3>
+          <p>
+            Ayuda a superar pendientes y recorrer distancias
+            con menos esfuerzo físico.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-icon">🚴</div>
+          <h3>Asistencia al pedaleo</h3>
+          <p>
+            En muchos modelos, el motor funciona cuando
+            pedaleás y ajustás el nivel de asistencia.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="tipos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">ENCONTRÁ TU ESTILO</span>
+          <h2>Tipos de bicicletas eléctricas</h2>
+          <p>
+            Cada modelo está diseñado para diferentes
+            terrenos, necesidades y formas de viajar.
+          </p>
+        </div>
+
+        <div class="filter-buttons" aria-label="Filtrar bicicletas">
+          <button class="filter-btn active"
+            data-filter="todas" aria-pressed="true">Todas</button>
+          <button class="filter-btn"
+            data-filter="urbana" aria-pressed="false">Urbanas</button>
+          <button class="filter-btn"
+            data-filter="montana" aria-pressed="false">Montaña</button>
+          <button class="filter-btn"
+            data-filter="plegable" aria-pressed="false">Plegables</button>
+        </div>
+
+        <div class="bike-grid">
+          <article class="bike-card" data-category="urbana">
+            <img
+              src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=900&q=85"
+              alt="Bicicleta para desplazamientos urbanos"
+              loading="lazy">
+            <div class="bike-content">
+              <span class="tag">Ciudad</span>
+              <h3>Bicicleta urbana</h3>
+              <p>
+                Ideal para ir al trabajo, estudiar o recorrer
+                la ciudad con comodidad.
+              </p>
+              <ul>
+                <li>Posición de conducción cómoda</li>
+                <li>Práctica para recorridos diarios</li>
+                <li>Puede incluir portaequipajes y luces</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="bike-card" data-category="montana">
+            <img
+              src="https://images.unsplash.com/photo-1544191696-15693072a5f4?auto=format&fit=crop&w=900&q=85"
+              alt="Bicicleta preparada para rutas y terrenos naturales"
+              loading="lazy">
+            <div class="bike-content">
+              <span class="tag">Aventura</span>
+              <h3>Bicicleta de montaña</h3>
+              <p>
+                Diseñada para caminos de tierra, senderos
+                y terrenos irregulares.
+              </p>
+              <ul>
+                <li>Neumáticos con buen agarre</li>
+                <li>Suspensión según el modelo</li>
+                <li>Asistencia para subir pendientes</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="bike-card" data-category="plegable">
+            <img
+              src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=900&q=85"
+              alt="Bicicleta compacta para transportar y guardar"
+              loading="lazy">
+            <div class="bike-content">
+              <span class="tag">Practicidad</span>
+              <h3>Bicicleta plegable</h3>
+              <p>
+                Una alternativa para quienes necesitan ahorrar
+                espacio en casa o combinar transportes.
+              </p>
+              <ul>
+                <li>Cuadro plegable en modelos específicos</li>
+                <li>Fácil de guardar</li>
+                <li>Útil para desplazamientos urbanos</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="image-note">
+          Las imágenes son ilustrativas y pueden no representar
+          bicicletas eléctricas específicas.
+        </p>
+      </div>
+    </section>
+
+    <section class="section container" id="ventajas">
+      <div class="section-heading">
+        <span class="eyebrow">¿POR QUÉ ELEGIR UNA E-BIKE?</span>
+        <h2>Ventajas y aspectos a considerar</h2>
+      </div>
+
+      <div class="pros-cons">
+        <article class="pros">
+          <h3>✓ Ventajas</h3>
+          <ul>
+            <li>Reduce el esfuerzo en pendientes.</li>
+            <li>Facilita trayectos cotidianos más largos.</li>
+            <li>No produce emisiones por el escape durante el uso.</li>
+            <li>Puede reducir gastos de transporte.</li>
+            <li>Permite seguir haciendo actividad física.</li>
+          </ul>
+        </article>
+
+        <article class="cons">
+          <h3>! Aspectos a considerar</h3>
+          <ul>
+            <li>Su precio inicial puede ser elevado.</li>
+            <li>La batería necesita recargas.</li>
+            <li>El peso suele ser mayor que en una bicicleta convencional.</li>
+            <li>La batería pierde capacidad con el tiempo.</li>
+            <li>Requiere mantenimiento del sistema eléctrico y mecánico.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="autonomia">
+      <div class="container calculator-layout">
+        <div>
+          <span class="eyebrow">PLANIFICÁ TU RECORRIDO</span>
+          <h2>Calculá la autonomía aproximada</h2>
+          <p>
+            La distancia que podés recorrer depende de la batería,
+            el terreno, el peso transportado, el viento, la velocidad
+            y el nivel de asistencia.
+          </p>
+          <p class="muted">
+            Esta herramienta ofrece una estimación orientativa,
+            no una garantía del fabricante.
+          </p>
+        </div>
+
+        <form class="calculator" id="range-form">
+          <label for="battery">Capacidad de la batería (Wh)</label>
+          <input
+            type="number"
+            id="battery"
+            name="battery"
+            min="50"
+            max="2000"
+            value="500"
+            required>
+
+          <label for="consumption">
+            Consumo estimado (Wh/km)
+          </label>
+          <input
+            type="number"
+            id="consumption"
+            name="consumption"
+            min="1"
+            max="100"
+            step="0.5"
+            value="10"
+            required>
+
+          <button class="btn btn-primary" type="submit">
+            Calcular autonomía
+          </button>
+
+          <div class="result" id="range-result" aria-live="polite">
+            <span>Autonomía estimada</span>
+            <strong id="range-value">50 km</strong>
+            <p id="range-detail">
+              Con 500 Wh y un consumo de 10 Wh/km.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container" id="mantenimiento">
+      <div class="section-heading">
+        <span class="eyebrow">CUIDÁ TU BICICLETA</span>
+        <h2>Consejos de mantenimiento</h2>
+        <p>
+          Un mantenimiento regular ayuda a mejorar la seguridad
+          y prolongar la vida útil de tu bicicleta.
+        </p>
+      </div>
+
+      <div class="maintenance-grid">
+        <article class="maintenance-item">
+          <span>01</span>
+          <h3>Cuidá la batería</h3>
+          <p>
+            Usá el cargador recomendado y evitá temperaturas
+            extremas y la humedad excesiva.
+          </p>
+        </article>
+
+        <article class="maintenance-item">
+          <span>02</span>
+          <h3>Revisá los frenos</h3>
+          <p>
+            Comprobá periódicamente pastillas, discos,
+            cables y funcionamiento general.
+          </p>
+        </article>
+
+        <article class="maintenance-item">
+          <span>03</span>
+          <h3>Controlá los neumáticos</h3>
+          <p>
+            Mantené la presión indicada por el fabricante
+            y revisá el desgaste.
+          </p>
+        </article>
+
+        <article class="maintenance-item">
+          <span>04</span>
+          <h3>Mantené la transmisión</h3>
+          <p>
+            Limpiá y lubricá la cadena según las condiciones
+            de uso y las recomendaciones del fabricante.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <span class="eyebrow">EL CAMBIO EMPIEZA CON UN PEDALEO</span>
+        <h2>Más movimiento. Menos emisiones.</h2>
+        <p>
+          Informate, elegí el modelo que se adapte a tus necesidades
+          y descubrí una nueva forma de desplazarte.
+        </p>
+        <a class="btn btn-light" href="#inicio">Volver al inicio ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">⚡</span> EcoBike
+      </a>
+      <p>
+        Proyecto educativo sobre bicicletas eléctricas y
+        movilidad sostenible.
+      </p>
+      <p class="copyright">
+        © <span id="year"></span> EcoBike. Creado para aprender y compartir.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

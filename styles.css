@@ -1,0 +1,760 @@
+
+/* ==============================
+   EcoBike - Estilos principales
+   ============================== */
+
+:root {
+  --green: #48d597;
+  --green-dark: #159568;
+  --dark: #10251c;
+  --dark-soft: #19352a;
+  --text: #24342d;
+  --muted: #68776f;
+  --background: #ffffff;
+  --soft: #f3f8f5;
+  --border: #e0e9e3;
+  --radius: 18px;
+  --shadow: 0 12px 35px rgba(16, 37, 28, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--green-dark);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 100px;
+}
+
+.section-soft {
+  background: var(--soft);
+}
+
+.section-dark {
+  color: white;
+  background: var(--dark);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--green-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-dark .eyebrow,
+.hero .eyebrow,
+.cta-section .eyebrow {
+  color: var(--green);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.section-heading h2,
+.calculator-layout h2,
+.cta-section h2 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* Navegación */
+
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.navbar {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo-icon {
+  color: var(--green-dark);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #42554a;
+  font-size: 0.9rem;
+  font-weight: 650;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--green-dark);
+}
+
+.menu-toggle {
+  display: none;
+  padding: 5px 10px;
+  color: var(--dark);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+/* Portada */
+
+.hero {
+  display: flex;
+  min-height: 650px;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 28, 20, 0.94) 0%,
+      rgba(8, 28, 20, 0.76) 50%,
+      rgba(8, 28, 20, 0.22) 100%
+    ),
+    url("https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=2000&q=90")
+      center 48% / cover no-repeat,
+    var(--dark);
+}
+
+.hero-content {
+  padding-block: 90px;
+}
+
+.hero h1 {
+  max-width: 750px;
+  margin-bottom: 24px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero-content > p {
+  max-width: 590px;
+  color: #e1eae4;
+  font-size: 1.08rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 23px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: var(--dark);
+  background: var(--green);
+}
+
+.btn-primary:hover {
+  background: #70e6b2;
+}
+
+.btn-outline {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin-top: 55px;
+}
+
+.hero-stats div {
+  display: grid;
+  gap: 3px;
+}
+
+.hero-stats strong {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.hero-stats span {
+  color: #d1ddd5;
+  font-size: 0.84rem;
+}
+
+/* Información */
+
+.info-grid,
+.bike-grid,
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.info-card:hover,
+.bike-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 15px;
+  background: #e7f8ef;
+  font-size: 1.7rem;
+}
+
+.info-card h3,
+.maintenance-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.info-card p,
+.bike-content p,
+.maintenance-item p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Tarjetas de bicicletas */
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  padding: 9px 20px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--dark);
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.bike-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.bike-card[hidden] {
+  display: none;
+}
+
+.bike-card img {
+  height: 235px;
+  background: #e4ebe6;
+}
+
+.bike-content {
+  padding: 24px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 11px;
+  color: #176f4d;
+  border-radius: 20px;
+  background: #e7f8ef;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.bike-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+}
+
+.bike-content ul {
+  display: grid;
+  gap: 7px;
+  margin-top: 18px;
+  padding-left: 20px;
+  color: #53645a;
+  font-size: 0.87rem;
+}
+
+.image-note {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Ventajas y desventajas */
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.pros,
+.cons {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pros {
+  background: #f0faf4;
+}
+
+.cons {
+  background: #fff8ee;
+}
+
+.pros h3,
+.cons h3 {
+  margin-bottom: 18px;
+}
+
+.pros h3 {
+  color: #14794c;
+}
+
+.cons h3 {
+  color: #9b5c18;
+}
+
+.pros ul,
+.cons ul {
+  display: grid;
+  gap: 12px;
+  padding-left: 22px;
+}
+
+/* Calculadora */
+
+.calculator-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.calculator-layout > div > p {
+  color: #d5e1d9;
+}
+
+.calculator-layout .muted {
+  margin-top: 18px;
+  color: #a9bdb0;
+  font-size: 0.88rem;
+}
+
+.calculator {
+  display: grid;
+  gap: 12px;
+  padding: 30px;
+  color: var(--text);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.14);
+}
+
+.calculator label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.calculator input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 13px;
+  border: 1px solid #cfdcd3;
+  border-radius: 9px;
+  background: white;
+}
+
+.calculator .btn {
+  margin-top: 12px;
+}
+
+.result {
+  display: grid;
+  gap: 4px;
+  margin-top: 12px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #e9f9f0;
+}
+
+.result span {
+  color: #37664f;
+  font-size: 0.88rem;
+}
+
+.result strong {
+  color: #126c43;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+
+.result p {
+  color: #536b5c;
+  font-size: 0.82rem;
+}
+
+/* Mantenimiento */
+
+.maintenance-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.maintenance-item {
+  padding: 24px 20px;
+  border-top: 2px solid var(--green);
+  background: var(--soft);
+}
+
+.maintenance-item > span {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--green-dark);
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+/* Llamada a la acción y pie */
+
+.cta-section {
+  padding-block: 85px;
+  color: white;
+  background:
+    radial-gradient(circle at 80% 10%, #265c43 0%, transparent 45%),
+    var(--dark);
+  text-align: center;
+}
+
+.cta-section h2 {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.cta-section p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: #d5e1d9;
+}
+
+.btn-light {
+  color: var(--dark);
+  background: white;
+}
+
+.btn-light:hover {
+  background: var(--green);
+}
+
+.footer {
+  padding-block: 35px;
+  background: #0a1912;
+  color: #c6d4cb;
+}
+
+.footer-content {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer .logo {
+  color: white;
+}
+
+.footer-content > p {
+  font-size: 0.9rem;
+}
+
+.copyright {
+  padding-top: 15px;
+  color: #93a79a;
+  border-top: 1px solid #2b4034;
+  width: 100%;
+  font-size: 0.8rem !important;
+}
+
+/* Adaptación a pantallas medianas */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .info-grid,
+  .bike-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .maintenance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .calculator-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 30px, 1120px);
+  }
+
+  .section {
+    padding-block: 70px;
+  }
+
+  .navbar {
+    min-height: 68px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid var(--border);
+    background: white;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 5px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    min-height: 590px;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    padding-block: 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.6rem);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content > p {
+    font-size: 0.98rem;
+  }
+
+  .hero-stats {
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .hero-stats strong {
+    font-size: 1.25rem;
+  }
+
+  .hero-stats span {
+    max-width: 155px;
+  }
+
+  .info-grid,
+  .bike-grid,
+  .pros-cons,
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .bike-card img {
+    height: 230px;
+  }
+
+  .calculator {
+    padding: 22px;
+  }
+
+  .cta-section {
+    padding-block: 65px;
+  }
+}
+
+/* Respeta las preferencias de accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
